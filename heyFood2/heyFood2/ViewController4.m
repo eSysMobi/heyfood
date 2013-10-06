@@ -1,19 +1,19 @@
 //
-//  ViewController2.m
-//  HeyFood
+//  ViewController4.m
+//  heyFood2
 //
-//  Created by eSys.me on 26.09.13.
+//  Created by eSys.me on 05.10.13.
 //  Copyright (c) 2013 esys.mobi. All rights reserved.
 //
 
-#import "ViewController2.h"
-#import "ViewController3.h"
-@interface ViewController2 ()
+#import "ViewController4.h"
+
+@interface ViewController4 ()
 
 @end
 
-@implementation ViewController2
-@synthesize districtTable,viewController3;
+@implementation ViewController4
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,21 +24,21 @@
 }
 
 - (void)viewDidLoad
-{ self.view.backgroundColor = [UIColor greenColor];
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
-NSURL *url = [NSURL URLWithString:@"http://howwedo.net/food/index.php/user_api/districts/format/json"];
+    NSURL *url = [NSURL URLWithString:@"http://howwedo.net/food/index.php/user_api/rest/format/json?id=1&city_id=0&district_id=0&cui=1,2"];
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
     NSError *error = nil;
     result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-  //  [result count];
+    //  [result count];
     NSLog(@"%@",result);
-     NSLog(@"%i",[result count]);
+    NSLog(@"%i",[result count]);
     return [result count];}
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-return 1;}
+    return 1;}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -51,25 +51,18 @@ return 1;}
     }
     UIImageView *imv=[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 68, 68)];
     imv.backgroundColor=[UIColor darkGrayColor];
-    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 100, 50)];
-    label.text=[[[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]] objectAtIndex:0] objectForKey:@"ru_name"];
     //imv.image=[UIImage imageNamed:@"avatar копия.png"];
-    NSLog(@"%i",indexPath.row);
-     NSLog(@"%@",[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]]);
-    NSLog(@"%@",[[[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]] objectAtIndex:0] objectForKey:@"ru_name"]);
     [cell addSubview:imv];
-    [cell addSubview:label];
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-           return 88;
-    }
+    return 88;
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    viewController3 =[[ViewController3 alloc] initWithNibName:@"ViewController3" bundle:nil];
-    [self.navigationController pushViewController:viewController3 animated:YES];
-   
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +70,5 @@ return 1;}
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)dealloc {
 
-}
 @end

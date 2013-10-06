@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController2 : UIViewController
+#import "ViewController3.h"
+@class ViewController3;
+@interface ViewController2 : UIViewController <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>{
+    NSMutableDictionary *dict;
+    id result;
+}
+@property(strong,nonatomic)ViewController3*viewController3;
 @property (retain, nonatomic) IBOutlet UITableView *districtTable;
 
 @end

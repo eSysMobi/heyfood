@@ -21,6 +21,10 @@
 		E713E18717F6B222001ABE99 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = E713E18317F6B222001ABE99 /* ViewController2.m */; };
 		E713E18817F6B222001ABE99 /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = E713E18417F6B222001ABE99 /* ViewController2.xib */; };
 		E713E18B17F6B27F001ABE99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E713E18A17F6B23F001ABE99 /* AppDelegate.m */; };
+		E7ED95AA1800261300F8EEE2 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ED95A81800261300F8EEE2 /* ViewController3.m */; };
+		E7ED95AB1800261300F8EEE2 /* ViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7ED95A91800261300F8EEE2 /* ViewController3.xib */; };
+		E7ED95AF1800271F00F8EEE2 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ED95AD1800271F00F8EEE2 /* ViewController4.m */; };
+		E7ED95B01800271F00F8EEE2 /* ViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7ED95AE1800271F00F8EEE2 /* ViewController4.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,12 @@
 		E713E18417F6B222001ABE99 /* ViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
 		E713E18917F6B23F001ABE99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E713E18A17F6B23F001ABE99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7ED95A71800261300F8EEE2 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
+		E7ED95A81800261300F8EEE2 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		E7ED95A91800261300F8EEE2 /* ViewController3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController3.xib; sourceTree = "<group>"; };
+		E7ED95AC1800271F00F8EEE2 /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		E7ED95AD1800271F00F8EEE2 /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		E7ED95AE1800271F00F8EEE2 /* ViewController4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController4.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,12 @@
 				E713E18217F6B222001ABE99 /* ViewController2.h */,
 				E713E18317F6B222001ABE99 /* ViewController2.m */,
 				E713E18417F6B222001ABE99 /* ViewController2.xib */,
+				E7ED95A71800261300F8EEE2 /* ViewController3.h */,
+				E7ED95A81800261300F8EEE2 /* ViewController3.m */,
+				E7ED95A91800261300F8EEE2 /* ViewController3.xib */,
+				E7ED95AC1800271F00F8EEE2 /* ViewController4.h */,
+				E7ED95AD1800271F00F8EEE2 /* ViewController4.m */,
+				E7ED95AE1800271F00F8EEE2 /* ViewController4.xib */,
 				E713E16617F6B1B0001ABE99 /* Supporting Files */,
 			);
 			path = heyFood2;
@@ -175,7 +191,9 @@
 				E713E17417F6B1B0001ABE99 /* Default@2x.png in Resources */,
 				E713E17617F6B1B0001ABE99 /* Default-568h@2x.png in Resources */,
 				E713E18617F6B222001ABE99 /* ViewController.xib in Resources */,
+				E7ED95AB1800261300F8EEE2 /* ViewController3.xib in Resources */,
 				E713E18817F6B222001ABE99 /* ViewController2.xib in Resources */,
+				E7ED95B01800271F00F8EEE2 /* ViewController4.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +208,8 @@
 				E713E16C17F6B1B0001ABE99 /* main.m in Sources */,
 				E713E18517F6B222001ABE99 /* ViewController.m in Sources */,
 				E713E18717F6B222001ABE99 /* ViewController2.m in Sources */,
+				E7ED95AA1800261300F8EEE2 /* ViewController3.m in Sources */,
+				E7ED95AF1800271F00F8EEE2 /* ViewController4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +326,7 @@
 				E713E17E17F6B1B0001ABE99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
