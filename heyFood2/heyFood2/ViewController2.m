@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 { self.view.backgroundColor = [UIColor greenColor];
+    self.navigationItem.title =@"Районы";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -35,10 +36,10 @@ NSURL *url = [NSURL URLWithString:@"http://howwedo.net/food/index.php/user_api/d
     result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
   //  [result count];
     NSLog(@"%@",result);
-     NSLog(@"%i",[result count]);
-    return [result count];}
+     NSLog(@"count = %i",[[result objectForKey:@"0"] count]);
+    return 1;}
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-return 1;}
+return [[result objectForKey:@"0"] count];}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -51,12 +52,12 @@ return 1;}
     }
     UIImageView *imv=[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 68, 68)];
     imv.backgroundColor=[UIColor darkGrayColor];
-    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 100, 50)];
-    label.text=[[[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]] objectAtIndex:0] objectForKey:@"ru_name"];
+    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 200, 50)];
+    label.text=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"ru_name"];
     //imv.image=[UIImage imageNamed:@"avatar копия.png"];
     NSLog(@"%i",indexPath.row);
-     NSLog(@"%@",[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]]);
-    NSLog(@"%@",[[[result objectForKey:[NSString stringWithFormat:@"%i",(indexPath.row)]] objectAtIndex:0] objectForKey:@"ru_name"]);
+     //NSLog(@"%@",[result objectForKey:[NSString stringWithFormat:@"0",(indexPath.row)]]);
+    NSLog(@"%@",[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"ru_name"]);
     [cell addSubview:imv];
     [cell addSubview:label];
     return cell;

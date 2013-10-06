@@ -1,19 +1,20 @@
 //
-//  ViewController4.m
+//  ViewController5.m
 //  heyFood2
 //
-//  Created by eSys.me on 05.10.13.
+//  Created by eSys.me on 06.10.13.
 //  Copyright (c) 2013 esys.mobi. All rights reserved.
 //
 
-#import "ViewController4.h"
 #import "ViewController5.h"
-@interface ViewController4 ()
+
+@interface ViewController5 ()
 
 @end
 
-@implementation ViewController4
-@synthesize viewController5;
+@implementation ViewController5
+@synthesize foodTable;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,12 +25,14 @@
 }
 
 - (void)viewDidLoad
-{self.navigationItem.title=@"Рестораны";
+{self.navigationItem.title=@"Блюда";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
-    NSURL *url = [NSURL URLWithString:@"http://howwedo.net/food/index.php/user_api/rest/format/json"];
+    NSURL *url = [NSURL URLWithString:@"http://howwedo.net/food/index.php/user_api/food/format/json?resid=1"];
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
     NSError *error = nil;
     result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
@@ -51,7 +54,7 @@
     }
     UIImageView *imv=[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 68, 68)];
     imv.backgroundColor=[UIColor darkGrayColor];
-    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 100, 50)];
+    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 300, 50)];
     label.text=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"ru_name"];
     //imv.image=[UIImage imageNamed:@"avatar копия.png"];
     NSLog(@"%i",indexPath.row);
@@ -67,8 +70,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    viewController5 =[[ViewController5 alloc] initWithNibName:@"ViewController5" bundle:nil];
-    [self.navigationController pushViewController:viewController5 animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

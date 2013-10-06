@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController3">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController5">
             <connections>
-                <outlet property="cuisinesTable" destination="oxc-uv-fU6" id="JVb-GX-vzg"/>
+                <outlet property="foodTable" destination="NNX-4g-7mz" id="eek-RQ-e3p"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -16,13 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-uv-fU6">
-                    <rect key="frame" x="0.0" y="5" width="320" height="568"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NNX-4g-7mz">
+                    <rect key="frame" x="0.0" y="7" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="Bgu-cr-dvD"/>
-                        <outlet property="delegate" destination="-1" id="H7p-mB-2U4"/>
+                        <outlet property="dataSource" destination="-1" id="Kv8-iP-8HL"/>
+                        <outlet property="delegate" destination="-1" id="ePs-b0-5k9"/>
                     </connections>
                 </tableView>
             </subviews>
