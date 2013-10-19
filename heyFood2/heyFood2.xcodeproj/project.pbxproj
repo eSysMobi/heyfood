@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E712EB1918113C8000CB475C /* RestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E712EB1718113C8000CB475C /* RestInfo.m */; };
+		E712EB1A18113C8000CB475C /* RestInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E712EB1818113C8000CB475C /* RestInfo.xib */; };
+		E712EB1E1811726600CB475C /* FoodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E712EB1C1811726600CB475C /* FoodInfo.m */; };
+		E712EB1F1811726600CB475C /* FoodInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E712EB1D1811726600CB475C /* FoodInfo.xib */; };
 		E713E15E17F6B1B0001ABE99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713E15D17F6B1B0001ABE99 /* UIKit.framework */; };
 		E713E16017F6B1B0001ABE99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713E15F17F6B1B0001ABE99 /* Foundation.framework */; };
 		E713E16217F6B1B0001ABE99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713E16117F6B1B0001ABE99 /* CoreGraphics.framework */; };
@@ -30,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E712EB1618113C8000CB475C /* RestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestInfo.h; sourceTree = "<group>"; };
+		E712EB1718113C8000CB475C /* RestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestInfo.m; sourceTree = "<group>"; };
+		E712EB1818113C8000CB475C /* RestInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestInfo.xib; sourceTree = "<group>"; };
+		E712EB1B1811726600CB475C /* FoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodInfo.h; sourceTree = "<group>"; };
+		E712EB1C1811726600CB475C /* FoodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodInfo.m; sourceTree = "<group>"; };
+		E712EB1D1811726600CB475C /* FoodInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodInfo.xib; sourceTree = "<group>"; };
 		E713E15A17F6B1B0001ABE99 /* heyFood2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heyFood2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E713E15D17F6B1B0001ABE99 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E713E15F17F6B1B0001ABE99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +134,12 @@
 				E7ED96D818018D9700F8EEE2 /* ViewController5.h */,
 				E7ED96D918018D9700F8EEE2 /* ViewController5.m */,
 				E7ED96DA18018D9700F8EEE2 /* ViewController5.xib */,
+				E712EB1618113C8000CB475C /* RestInfo.h */,
+				E712EB1718113C8000CB475C /* RestInfo.m */,
+				E712EB1818113C8000CB475C /* RestInfo.xib */,
+				E712EB1B1811726600CB475C /* FoodInfo.h */,
+				E712EB1C1811726600CB475C /* FoodInfo.m */,
+				E712EB1D1811726600CB475C /* FoodInfo.xib */,
 				E713E16617F6B1B0001ABE99 /* Supporting Files */,
 			);
 			path = heyFood2;
@@ -203,6 +219,8 @@
 				E7ED96DC18018D9700F8EEE2 /* ViewController5.xib in Resources */,
 				E713E18817F6B222001ABE99 /* ViewController2.xib in Resources */,
 				E7ED95B01800271F00F8EEE2 /* ViewController4.xib in Resources */,
+				E712EB1F1811726600CB475C /* FoodInfo.xib in Resources */,
+				E712EB1A18113C8000CB475C /* RestInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,12 +232,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E713E18B17F6B27F001ABE99 /* AppDelegate.m in Sources */,
+				E712EB1E1811726600CB475C /* FoodInfo.m in Sources */,
 				E713E16C17F6B1B0001ABE99 /* main.m in Sources */,
 				E713E18517F6B222001ABE99 /* ViewController.m in Sources */,
 				E713E18717F6B222001ABE99 /* ViewController2.m in Sources */,
 				E7ED96DB18018D9700F8EEE2 /* ViewController5.m in Sources */,
 				E7ED95AA1800261300F8EEE2 /* ViewController3.m in Sources */,
 				E7ED95AF1800271F00F8EEE2 /* ViewController4.m in Sources */,
+				E712EB1918113C8000CB475C /* RestInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

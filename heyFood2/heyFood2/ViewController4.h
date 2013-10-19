@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController5.h"
+#import "RestInfo.h"
+@class RestInfo;
 @interface ViewController4 : UIViewController <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>{
     NSMutableDictionary *dict;
     id result;
 }
+@property(strong,nonatomic)RestInfo *restInfo;
 @property (retain, nonatomic) IBOutlet UITableView *restTable;
 @property(strong,nonatomic) ViewController5 *viewController5;
 @end

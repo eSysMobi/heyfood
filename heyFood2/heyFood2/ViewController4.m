@@ -8,12 +8,13 @@
 
 #import "ViewController4.h"
 #import "ViewController5.h"
+#import "RestInfo.h"
 @interface ViewController4 ()
 
 @end
 
 @implementation ViewController4
-@synthesize viewController5;
+@synthesize viewController5,restInfo;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,7 +51,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UIImageView *imv=[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 68, 68)];
-    imv.backgroundColor=[UIColor darkGrayColor];
+    NSString *str=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"picture"];
+    NSString *restid =[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"id"];
+    if ([str length]>4) {
+        imv.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://howwedo.net/food/upload/%@/%@%@",restid,[str substringToIndex:[str length]-4],@"_s.jpg"]]]];}
     UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 100, 50)];
     label.text=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"ru_name"];
     //imv.image=[UIImage imageNamed:@"avatar копия.png"];
@@ -67,8 +71,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    viewController5 =[[ViewController5 alloc] initWithNibName:@"ViewController5" bundle:nil];
-    [self.navigationController pushViewController:viewController5 animated:YES];
+    restInfo =[[RestInfo alloc] initWithNibName:@"RestInfo" bundle:nil];
+    restInfo.detailItem=[NSString stringWithFormat:@"%i",indexPath.row];
+    [self.navigationController pushViewController:restInfo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

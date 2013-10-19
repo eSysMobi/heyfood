@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController5
-@synthesize foodTable;
+@synthesize foodTable,detailItem2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,7 +53,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UIImageView *imv=[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 68, 68)];
-    imv.backgroundColor=[UIColor darkGrayColor];
+    NSString *str=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"picture"];
+    if ([str length]>4) {
+        imv.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://howwedo.net/food/upload/%@/%@%@",detailItem2,[str substringToIndex:[str length]-4],@"_s.jpg"]]]];}
+    NSLog(@"%@",[NSString stringWithFormat:@"http://howwedo.net/food/upload/%@/%@%@",detailItem2,[str substringToIndex:[str length]-4],@"_s.jpg"]);
     UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(98, 10, 300, 50)];
     label.text=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"ru_name"];
     //imv.image=[UIImage imageNamed:@"avatar копия.png"];

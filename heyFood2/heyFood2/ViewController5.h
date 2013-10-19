@@ -12,6 +12,7 @@
     NSMutableDictionary *dict;
     id result;
 }
+@property (strong, nonatomic) id detailItem2;
 @property (retain, nonatomic) IBOutlet UITableView *foodTable;
 
 @end
