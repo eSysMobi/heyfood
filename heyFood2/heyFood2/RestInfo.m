@@ -31,14 +31,14 @@
     NSError *error = nil;
     result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
     NSString *str=[[[result objectForKey:@"0"] objectAtIndex:[detailItem integerValue]] objectForKey:@"picture"];
-     NSString *restid =[[[result objectForKey:@"0"] objectAtIndex:[detailItem integerValue]] objectForKey:@"id"];
+    NSString *restid =[[[result objectForKey:@"0"] objectAtIndex:[detailItem integerValue]] objectForKey:@"id"];
     restImage.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://howwedo.net/food/upload/%@/%@%@",restid,[str substringToIndex:[str length]-4],@"_s.jpg"]]]];
     [nameLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"ru_name"]];
     [adresLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"address"]];
     [timeLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"time1"]];
     [timeLabel2 setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"time2"]];
-   // [minLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"min_order"]];
-   // [moneyLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"del_cost"]];
+    [minLabel setText:[NSString stringWithFormat:@"%i",[[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"min_order"]integerValue]]];
+    [moneyLabel setText:[NSString stringWithFormat:@"%i",[[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"del_cost"]integerValue]]];
     [transpLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"del_time"]];
     [dayLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"schedule"]];
     [InfoLabel setText:[[[result objectForKey:@"0"]objectAtIndex:[detailItem integerValue]] objectForKey:@"additional_ru"]];
@@ -54,7 +54,7 @@
 
 - (IBAction)menuButtonAct:(id)sender {
     viewController5 =[[ViewController5 alloc] initWithNibName:@"ViewController5" bundle:nil];
-    viewController5.detailItem2=[[[result objectForKey:@"0"] objectAtIndex:indexPath.row] objectForKey:@"id"];
+    viewController5.detailItem2=[[[result objectForKey:@"0"] objectAtIndex:[detailItem integerValue]] objectForKey:@"id"];
     [self.navigationController pushViewController:viewController5 animated:YES];
 
 }

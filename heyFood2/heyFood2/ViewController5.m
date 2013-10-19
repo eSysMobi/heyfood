@@ -7,13 +7,14 @@
 //
 
 #import "ViewController5.h"
-
+#import "FoodInfo.h"
+#import "ViewController4.h"
 @interface ViewController5 ()
 
 @end
 
 @implementation ViewController5
-@synthesize foodTable,detailItem2;
+@synthesize foodTable,detailItem2,foodInfo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,8 +74,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    foodInfo =[[FoodInfo alloc] initWithNibName:@"FoodInfo" bundle:nil];
+    foodInfo.detailItem3=[NSString stringWithFormat:@"%i",indexPath.row];
+    [self.navigationController pushViewController:foodInfo animated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

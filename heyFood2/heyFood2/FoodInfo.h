@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FoodInfo : UIViewController
+@interface FoodInfo : UIViewController{
+id result;    
+}
+@property (strong, nonatomic) id detailItem3;
+@property (weak, nonatomic) IBOutlet UIImageView *foodImage;
+@property (weak, nonatomic) IBOutlet UILabel *foodName;
+@property (weak, nonatomic) IBOutlet UILabel *shortDiskr;
+@property (weak, nonatomic) IBOutlet UILabel *fullDiskr;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+- (IBAction)addButtonAct:(id)sender;
 
 @end
